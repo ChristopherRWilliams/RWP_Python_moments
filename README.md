@@ -32,7 +32,7 @@ The code will generate event images (if there is a precipitation event) and will
 # Running the Source Code
 1) The user should only need to modify the "main" routine. All other functions are labeled "func" and should not need to be modified.
 
-2) The user will need to verify the paths defined for your system.
+2) The user will need to change the paths so that they work for your system.
 
-3) Change the start and end dates in the "main" routine to include the date range of the source data files. 
+3) Change the start and end dates in the "main" routine to include the date range of the source data files that have been downloaded. 
 
