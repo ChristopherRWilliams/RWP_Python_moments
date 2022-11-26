@@ -14,7 +14,9 @@ On your system, create five directories:
 Place the Python code from this repository into the directory: py_files
 
 # Input Source Data
-Go to the US Department of Energy (DOE) Atmospheric Radiation Measurement (ARM) program Data Discovery (https://adc.arm.gov/discovery/#/) and download the precipitation mode RWP spectra (http://dx.doi.org/10.5439/1025129). Place this input files into the directory: rwp_precip_spec
+Go to the US Department of Energy (DOE) Atmospheric Radiation Measurement (ARM) program Data Discovery (https://adc.arm.gov/discovery/#/) and download the precipitation mode RWP spectra (http://dx.doi.org/10.5439/1025129). 
+
+Place the downloaded input soure files into the directory: rwp_precip_spec
 
 # Output netCDF files
 The generated netCDF files will be placed into the directory: nc_precip_crw0
