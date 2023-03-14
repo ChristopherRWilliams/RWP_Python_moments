@@ -282,7 +282,7 @@ def func_find_2spc_tda_moments(spc_input, Vd_input, range_input, Ncoh_input,
                 # Perform the HS noise search
                 initial_seed_length = len(spc_lin)//8
                 spc_sort    = np.sort(spc_lin)
-                spc_sort[0:initial_seed_length] = np.ones(initial_seed_length) * spc_sort[initial_seed_length]
+                spc_sort[0:initial_seed_length] = np.ones(initial_seed_length) * spc_sort[initial_seed_length-1]
                 
                 [nos_mean, nos_max] = func_find_mean_HS_noise(
                     spc_sort, Nspc, initial_seed_length)
@@ -290,12 +290,13 @@ def func_find_2spc_tda_moments(spc_input, Vd_input, range_input, Ncoh_input,
                 # find the noise standard deviation
                 f = spc_lin < nos_max
                 if (np.sum(f) > 3):
-                    nos_std = np.std(np.round(spc_lin[f]))
+                    nos_std = np.std(spc_lin[f], ddof=1)
                 else:
                     nos_std = np.nan
 
                 # Set noise threshold
-                nos_threshold = nos_max
+                std_nos_threshold = nos_mean + 3.0*nos_std
+                nos_threshold = np.maximum(nos_max, std_nos_threshold)
 
                 spc_nos_mean[prof_num, c] = nos_mean
                 spc_nos_max[prof_num, c] = nos_max
