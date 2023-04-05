@@ -14,7 +14,7 @@ On your system, create five directories:
 Place the Python code from this repository into the directory: py_files
 
 # Input Source Data
-Go to the US Department of Energy (DOE) Atmospheric Radiation Measurement (ARM) program Data Discovery (https://adc.arm.gov/discovery/#/) and download at least one precipitation mode RWP spectra data file from the Southern Great Plains (SGP) Central Facility (C1). An example data file has the format: sgp915rwpprecipspecC1.a0.yyyymmdd.hhmmss.cdf, where yyyymmdd.hhmmss is the date and time at the beginning of the data file. 
+Go to the US Department of Energy (DOE) Atmospheric Radiation Measurement (ARM) program Data Discovery (https://adc.arm.gov/discovery/#/) and download at least one precipitation mode RWP spectra data file from the Southern Great Plains (SGP) Central Facility (C1). An example data file has the format: sgp915rwpprecipspecC1.a0.yyyyMMdd.hhmmss.cdf, where yyyyMMdd.hhmmss is the date and time at the beginning of the data file. 
 
 The link (http://dx.doi.org/10.5439/1025129) will take you to Data Discovery and will select the correct data type. 
 
